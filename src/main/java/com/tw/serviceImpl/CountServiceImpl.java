@@ -19,8 +19,7 @@ public class CountServiceImpl implements CountService {
 		Count obj = countRepo.getOne(1L);
 		int i=obj.getCount();
 		String s ="INV-"+i;
-		obj.setCount(i+1);
-		countRepo.save(obj);
+		
 		return s;
 	}
 
