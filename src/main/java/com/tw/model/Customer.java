@@ -19,7 +19,7 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name=("customer"))
-@Where(clause = "deleted=true")
+@Where(clause = "deleted=false")
 public class Customer extends AbstractPersistable{
 	/**
 	 * @author FAIZAN
