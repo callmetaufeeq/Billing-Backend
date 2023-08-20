@@ -51,7 +51,9 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public String customerDelete(Long id) {
-		customerRepo.deleteById(id);
+		Customer c=customerRepo.getOne(id);
+		c.setDeleted(true);
+		customerRepo.save(c);
 		return "Deleted Successfully";
 	}
 
