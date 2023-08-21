@@ -22,5 +22,4 @@ public class CountServiceImpl implements CountService {
 		return s;
 	}
 
-
 }

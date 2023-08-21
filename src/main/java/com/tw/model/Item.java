@@ -11,27 +11,25 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name=("item"))
+@Table(name = ("item"))
 @Where(clause = "deleted=false")
-public class Item extends AbstractPersistable{
-
+public class Item extends AbstractPersistable {
 
 	/**
-	 *  @author TAUFEEQ
+	 * @author TAUFEEQ
 	 */
 	private static final long serialVersionUID = -4537563744776365416L;
 
 	@Column(name = "item_name")
 	private String itemName;
-	
-	@Column(name = "qyt")
-	private int qyt;
-	
+
+	@Column(name = "quantity")
+	private int quantity;
+
 	@Column(name = "price")
 	private double price;
-	 
+
 	@Column(name = "amount")
 	private double amount;
-	
-	
+
 }

@@ -51,25 +51,10 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public String customerDelete(Long id) {
-		Customer c=customerRepo.getOne(id);
+		Customer c = customerRepo.getOne(id);
 		c.setDeleted(true);
 		customerRepo.save(c);
 		return "Deleted Successfully";
 	}
-
-//	@Override
-//	public String saveData(CustomerDto dto) {
-//		logger.info("Creating user: " + dto);
-//		Customer c = new Customer();
-//		if (dto.getId() != null) {
-//			c = customerRepo.getOne(dto.getId());
-//		}
-//		c.setId(dto.getId());
-//		c.setCustomerName(dto.getCustomerName());
-//		c.setAddress(dto.getAddress());
-//		c.setMobileNumber(dto.getMobileNumber());
-//		customerRepo.save(c);
-//		return ("ok");;
-//	}
 
 }
