@@ -47,7 +47,7 @@ public class Customer extends AbstractPersistable {
 	private Calendar invoiceDate;
 
 	@Column(name = "invoice_no")
-	private String invoice;
+	private String invoiceNumber;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "customer_item", joinColumns = @JoinColumn(name = "customer_id"), inverseJoinColumns = @JoinColumn(name = "item_id"))
