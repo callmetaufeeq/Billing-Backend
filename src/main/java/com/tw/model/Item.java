@@ -19,6 +19,9 @@ public class Item extends AbstractPersistable {
 	 * @author TAUFEEQ
 	 */
 	private static final long serialVersionUID = -4537563744776365416L;
+	
+	@Column(name = "item_id")
+	private Long itemId;
 
 	@Column(name = "item_name")
 	private String itemName;
