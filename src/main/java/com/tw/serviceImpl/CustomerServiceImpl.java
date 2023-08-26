@@ -40,7 +40,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public List<Customer> getCustomers() {
-		return customerRepo.findAll();
+		return customerRepo.findAllByOrderByIdDesc();
 	}
 
 	@Override
