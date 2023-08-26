@@ -38,5 +38,4 @@ public class ItemServiceImpl implements ItemService {
 		return itemReository.getById(id);
 	}
 
-
 }

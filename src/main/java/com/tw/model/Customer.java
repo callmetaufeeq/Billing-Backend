@@ -51,7 +51,6 @@ public class Customer extends AbstractPersistable {
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "customer_item", joinColumns = @JoinColumn(name = "customer_id"), inverseJoinColumns = @JoinColumn(name = "item_id"))
-
 	private List<Item> item;
 
 }

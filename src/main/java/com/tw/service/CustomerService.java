@@ -1,20 +1,22 @@
 package com.tw.service;
 
-import java.util.List;
-
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.tw.model.Customer;
+import com.tw.dto.CustomerDto;
+import com.tw.dto.CustomerSpecDto;
 
 @Service
 public interface CustomerService {
 
-	String saveData(Customer dto);
+	ResponseEntity<?> saveData(CustomerDto dto);
 
-	List<Customer> getCustomers();
+	ResponseEntity<?> getCustomers();
 
-	Customer getCustomerById(Long id);
+	ResponseEntity<?> getCustomerById(Long id);
 
-	String customerDelete(Long id);
+	ResponseEntity<?> customerDelete(Long id);
+
+	ResponseEntity<?> findAllwithpage(CustomerSpecDto custSpeDto);
 
 }
